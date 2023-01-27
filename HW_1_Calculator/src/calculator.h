@@ -119,15 +119,17 @@ public:
 	// -------------------------------------------------------------------------
 	// КОНСТРУКТОРЫ
 
+	// без конструктора по умолчанию
+	Calculator() = delete;
+
 	/*
 	Конструктор с параметрами
 	num1 = первый аргумент
 	num2 = второй аргумент
 	*/
-	Calculator(double num1, double num2)
+	Calculator(double num1, double num2) : num1_(num1), num2_(num2)
 	{
-		num1_ = num1;
-		num2_ = num2;
+		// ----
 	}	
 };
 
