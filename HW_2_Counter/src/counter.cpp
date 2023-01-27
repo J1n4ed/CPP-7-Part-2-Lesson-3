@@ -56,7 +56,7 @@ int main(int argc, char** argv)
 		std::cout << "Введите пользовательский параметр счётчика: ";
 		std::cin >> userCounter;
 
-		Counter count1(userCounter);
+		Counter count(userCounter);
 
 		do // while (!stopFlag);
 		{
@@ -69,7 +69,7 @@ int main(int argc, char** argv)
 				" x : завершите работу программы\n" <<
 				"\n------------------------------\n" <<
 				"Состояние счётчика:\n" <<
-				"Counter = " << count1.get_counter() <<
+				"Counter = " << count.get_counter() <<
 				"\n------------------------------\n" <<
 				"Введите операцию : ";
 
@@ -78,13 +78,13 @@ int main(int argc, char** argv)
 			switch (operation)
 			{
 			case '+': // +1
-				count1.increase();
+				count.increase();
 				break;
 			case '-': // -1
-				count1.decrease();
+				count.decrease();
 				break;
 			case '=': // вывод
-				std::cout << "\nЗначение счётчика: " << count1.get_counter() << "\n";
+				std::cout << "\nЗначение счётчика: " << count.get_counter() << "\n";
 				system("pause");
 				break;
 			case 'x': // х англ
@@ -105,7 +105,7 @@ int main(int argc, char** argv)
 	} 
 	else
 	{
-		Counter count2;
+		Counter count;
 
 		do // while (!stopFlag);
 		{
@@ -118,7 +118,7 @@ int main(int argc, char** argv)
 				" x : завершите работу программы\n" <<
 				"\n------------------------------\n" <<
 				"Состояние счётчика:\n" <<
-				"Counter = " << count2.get_counter() <<
+				"Counter = " << count.get_counter() <<
 				"\n------------------------------\n" <<
 				"Введите операцию : ";
 
@@ -127,13 +127,13 @@ int main(int argc, char** argv)
 			switch (operation)
 			{
 			case '+': // +1
-				count2.increase();
+				count.increase();
 				break;
 			case '-': // -1
-				count2.decrease();
+				count.decrease();
 				break;
 			case '=': // вывод
-				std::cout << "\nЗначение счётчика: " << count2.get_counter() << "\n";
+				std::cout << "\nЗначение счётчика: " << count.get_counter() << "\n";
 				system("pause");
 				break;
 			case 'x': // х англ
