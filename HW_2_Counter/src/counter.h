@@ -10,7 +10,7 @@ class Counter
 private:
 	// ------------------------------------------------------------------------------
 	// PRIVATE ÀĞÃÓÌÅÍÒÛ
-	int counter;
+	int counter_;
 protected:
 	// ------------------------------------------------------------------------------
 	// PROTECTED ÌÅÒÎÄÛ
@@ -23,7 +23,7 @@ public:
 	*/
 	void increase()
 	{
-		this->counter++;
+		counter_++;
 	}
 
 	/*
@@ -31,7 +31,7 @@ public:
 	*/
 	void decrease()
 	{
-		this->counter--;
+		counter_--;
 	}
 
 	/*
@@ -39,7 +39,7 @@ public:
 	*/
 	int get_counter()
 	{
-		return this->counter;
+		return counter_;
 	}
 
 	// ------------------------------------------------------------------------------
@@ -51,7 +51,7 @@ public:
 	*/
 	Counter()
 	{
-		this->counter = 1;
+		counter_ = 1;
 	}
 
 	/*
@@ -60,7 +60,7 @@ public:
 	*/
 	Counter(int counter)
 	{
-		this->counter = counter;
+		counter_ = counter;
 	}
 };
 

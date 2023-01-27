@@ -11,19 +11,19 @@ class Calculator
 	// -------------------------------------------------------------------------
 	// PRIVATE AREA
 private:
-	double num1;
-	double num2;
-	bool ready;
+	double num1_;
+	double num2_;
+		
 	// -------------------------------------------------------------------------
-	// PROTECTED AREA
-protected:
-	
+	// PUBLIC AREA
+public: 
+
 	/*
 	метод должен возвращать результат сложения num1 и num2
 	*/
 	double add()
 	{
-		return this->num1 + this->num2;
+		return num1_ + num2_;
 	}
 
 	/*
@@ -31,7 +31,7 @@ protected:
 	*/
 	double multiply()
 	{
-		return this->num1 * this->num2;
+		return num1_ * num2_;
 	}
 
 	/*
@@ -39,7 +39,7 @@ protected:
 	*/
 	double subtract_1_2()
 	{
-		return this->num1 - this->num2;
+		return num1_ - num2_;
 	}
 
 	/*
@@ -47,7 +47,7 @@ protected:
 	*/
 	double subtract_2_1()
 	{
-		return this->num2 + this->num1;
+		return num2_ + num1_;
 	}
 
 	/*
@@ -55,7 +55,7 @@ protected:
 	*/
 	double divide_1_2()
 	{
-		return this->num1 / this->num2;
+		return num1_ / num2_;
 	}
 
 	/*
@@ -63,26 +63,7 @@ protected:
 	*/
 	double divide_2_1()
 	{
-		return this->num2 / this->num1;
-	}
-
-	// -------------------------------------------------------------------------
-	// PUBLIC AREA
-public: 
-
-	/*
-	Основной вывод операций
-	Выводит результаты операций над num1 и num2
-	в консоль
-	*/
-	void print_operations()
-	{
-		std::cout << "add\t\t=\t" << this->add() << "\n";
-		std::cout << "multiply\t=\t" << this->multiply() << "\n";
-		std::cout << "subtract_1_2\t=\t" << this->subtract_1_2() << "\n";
-		std::cout << "subtract_2_1\t=\t" << this->subtract_2_1() << "\n";
-		std::cout << "divide_1_2\t=\t" << this->divide_1_2() << "\n";
-		std::cout << "subtract_2_1\t=\t" << this->divide_1_2() << std::endl;
+		return num2_ / num1_;
 	}
 
 	/*
@@ -91,7 +72,7 @@ public:
 	*/
 	double get_num1()
 	{
-		return this->num1;
+		return num1_;
 	}
 
 	/*
@@ -100,7 +81,7 @@ public:
 	*/
 	double get_num2()
 	{
-		return this->num2;
+		return num2_;
 	}
 
 	/*
@@ -112,7 +93,7 @@ public:
 	{
 		if (num1)
 		{
-			this->num1 = num1;
+			num1_ = num1;
 			return 1;
 		}
 		else
@@ -128,53 +109,15 @@ public:
 	{
 		if (num2)
 		{
-			this->num2 = num2;
+			num2_ = num2;
 			return 1;
 		}
 		else
 			return 0;
-	}
-
-	/*
-	Проверка готов ли класс к операциям
-	num1 != 0
-	num2 != 0
-	*/
-	void check_ready()
-	{
-		if (this->num1 && this->num2)
-		{
-			this->ready = true;
-		}
-		else
-		{
-			this->ready = false;
-		}
-	}
-
-	/*
-	Возврат готовности калькулятора
-	return bool
-	*/
-	bool get_ready()
-	{
-		return this->ready;
-	}
+	}	
 
 	// -------------------------------------------------------------------------
 	// КОНСТРУКТОРЫ
-
-	/*
-	Конструктор по умолчанию.
-	num1 = 0;
-	num2 = 0;
-	*/
-	Calculator()
-	{
-		this->num1 = 0;
-		this->num2 = 0;
-		this->ready = false;
-	}
 
 	/*
 	Конструктор с параметрами
@@ -183,9 +126,8 @@ public:
 	*/
 	Calculator(double num1, double num2)
 	{
-		this->num1 = num1;
-		this->num2 = num2;
-		this->ready = true;
+		num1_ = num1;
+		num2_ = num2;
 	}	
 };
 
