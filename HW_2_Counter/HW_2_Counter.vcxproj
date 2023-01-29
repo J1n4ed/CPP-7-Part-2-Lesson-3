@@ -25,6 +25,7 @@
     <None Include="readme.md" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="src\counter.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -7,114 +7,66 @@
 Калькулятор для действия с двумя числами
 */
 class Calculator
-{
-	// -------------------------------------------------------------------------
-	// PRIVATE AREA
-private:
-	double num1_;
-	double num2_;
-		
-	// -------------------------------------------------------------------------
-	// PUBLIC AREA
+{		
+// -------------------------------------------------------------------------
+// PUBLIC AREA
 public: 
 
 	/*
 	метод должен возвращать результат сложения num1 и num2
 	*/
-	double add()
-	{
-		return num1_ + num2_;
-	}
+	double add();
 
 	/*
 	метод должен возвращать результат перемножения num1 и num2
 	*/
-	double multiply()
-	{
-		return num1_ * num2_;
-	}
+	double multiply();
 
 	/*
 	метод должен возвращать результат вычитания num2 из num1
 	*/
-	double subtract_1_2()
-	{
-		return num1_ - num2_;
-	}
+	double subtract_1_2();
 
 	/*
 	метод должен возвращать результат вычитания num1 из num2
 	*/
-	double subtract_2_1()
-	{
-		return num2_ + num1_;
-	}
+	double subtract_2_1();
 
 	/*
 	метод должен возвращать результат деления num1 на num2
 	*/
-	double divide_1_2()
-	{
-		return num1_ / num2_;
-	}
+	double divide_1_2();
 
 	/*
 	метод должен возвращать результат деления num2 на num1
 	*/
-	double divide_2_1()
-	{
-		return num2_ / num1_;
-	}
+	double divide_2_1();
 
 	/*
 	геттер num1
 	return double
 	*/
-	double get_num1()
-	{
-		return num1_;
-	}
+	double get_num1();
 
 	/*
 	геттер num2
 	return double
 	*/
-	double get_num2()
-	{
-		return num2_;
-	}
+	double get_num2();
 
 	/*
 	метод должен установить значение поля num1 равное значению аргумента num1 в случае,
 	если значение аргумента не равно 0. Возвращает true, если установка произошла успешно,
 	в обратном случае false
 	*/
-	bool set_num1(double num1)
-	{
-		if (num1)
-		{
-			num1_ = num1;
-			return 1;
-		}
-		else
-			return 0;
-	}
+	bool set_num1(double);
 
 	/*
 	метод должен установить значение поля num2 равное значению аргумента num2 в случае,
 	если значение аргумента не равно 0. Возвращает true, если установка произошла успешно,
 	в обратном случае false
 	*/
-	bool set_num2(double num2)
-	{
-		if (num2)
-		{
-			num2_ = num2;
-			return 1;
-		}
-		else
-			return 0;
-	}	
+	bool set_num2(double);
 
 	// -------------------------------------------------------------------------
 	// КОНСТРУКТОРЫ
@@ -131,6 +83,12 @@ public:
 	{
 		// ----
 	}	
+
+// -------------------------------------------------------------------------
+// PRIVATE AREA
+private:
+	double num1_;
+	double num2_;
 };
 
 #endif // CALCULATORH
