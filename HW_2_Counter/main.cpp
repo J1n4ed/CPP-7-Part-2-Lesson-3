@@ -50,13 +50,15 @@ int main(int argc, char** argv)
 		notDefaultValueFlag = true;
 	}
 
+	Counter count;
+
 	if (notDefaultValueFlag)
 	{
 		int userCounter = 0;
 		std::cout << "¬ведите пользовательский параметр счЄтчика: ";
 		std::cin >> userCounter;
 
-		Counter count(userCounter);
+		count = Counter(userCounter);
 
 		do // while (!stopFlag);
 		{
@@ -105,7 +107,7 @@ int main(int argc, char** argv)
 	} 
 	else
 	{
-		Counter count;
+		// counter moved up from if
 
 		do // while (!stopFlag);
 		{
